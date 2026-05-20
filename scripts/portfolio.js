@@ -1,6 +1,13 @@
 const DEFAULT_USER = "BraicuDragos";
 
 const container = document.getElementById("portfolio-container");
+const searchInput = document.getElementById("portfolio-search");
+const statusArea = document.getElementById("portfolio-status");
+
+const state = {
+  projects: [],
+  query: "",
+};
 
 function createCard(project) {
   const card = document.createElement("article");
@@ -44,14 +51,75 @@ function createCard(project) {
   return card;
 }
 
+function setStatus(type, message) {
+  if (!statusArea) {
+    return;
+  }
+
+  statusArea.className = "text-sm text-stone-500";
+  statusArea.innerHTML = "";
+
+  if (type === "loading") {
+    statusArea.className = "flex items-center gap-2 text-sm text-stone-500";
+    statusArea.innerHTML =
+      "<span class=\"portfolio-spinner\"></span>Loading projects...";
+    return;
+  }
+
+  if (!message) {
+    return;
+  }
+
+  if (type === "error") {
+    statusArea.className = "text-sm text-stone-600";
+  }
+
+  statusArea.textContent = message;
+}
+
 function renderProjects(projects) {
   container.innerHTML = "";
   projects.forEach((project) => container.appendChild(createCard(project)));
 }
 
-function showEmptyState() {
-  container.innerHTML =
-    "<p class=\"text-sm text-stone-600\">No projects available at the moment.</p>";
+function getFilteredProjects() {
+  const query = state.query.toLowerCase();
+  let filtered = state.projects.filter((project) => project && project.fork === false);
+
+  if (query) {
+    filtered = filtered.filter((project) => {
+      const name = project.name ? project.name.toLowerCase() : "";
+      const description = project.description ? project.description.toLowerCase() : "";
+
+      return name.includes(query) || description.includes(query);
+    });
+  }
+
+  const sorted = filtered.slice();
+  sorted.sort(
+    (a, b) =>
+      new Date(b.updated_at ?? 0).getTime() -
+      new Date(a.updated_at ?? 0).getTime()
+  );
+
+  return sorted;
+}
+
+function applyFilters() {
+  if (!container) {
+    return;
+  }
+
+  const filtered = getFilteredProjects();
+
+  if (filtered.length === 0) {
+    renderProjects([]);
+    setStatus("empty", "No projects match the current filters.");
+    return;
+  }
+
+  setStatus("none", "");
+  renderProjects(filtered);
 }
 
 async function loadProjects() {
@@ -60,24 +128,42 @@ async function loadProjects() {
   }
 
   const username = container.dataset.githubUser || DEFAULT_USER;
-  const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated`;
+  const apiUrl = `https://api.github.com/users/${username}/repos`;
+
+  setStatus("loading");
+  container.innerHTML = "";
 
   try {
     const response = await fetch(apiUrl);
     if (!response.ok) {
-      showEmptyState();
+      setStatus(
+        "error",
+        "Ups! Nu am putut incarca proiectele momentan. :)"
+      );
       return;
     }
 
     const projects = await response.json();
     if (!Array.isArray(projects) || projects.length === 0) {
-      throw new Error("No projects returned");
+      setStatus("empty", "No projects available at the moment.");
+      return;
     }
 
-    renderProjects(projects.slice(0, 6));
+    state.projects = projects;
+    applyFilters();
   } catch (error) {
-    showEmptyState();
+    setStatus(
+      "error",
+      "Ups! Nu am putut incarca proiectele momentan. :O"
+    );
   }
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", (event) => {
+    state.query = event.target.value.trim();
+    applyFilters();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", loadProjects);

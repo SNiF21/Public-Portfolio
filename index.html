@@ -74,8 +74,21 @@
         </div>
       </section>
 
-      <section id="portfolio" class="space-y-3">
+      <section id="portfolio" class="space-y-4">
         <h2 class="text-xl font-semibold">Projects</h2>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div class="w-full sm:max-w-xs">
+            <label for="portfolio-search" class="sr-only">Search projects: </label>
+            <input
+              id="portfolio-search"
+              type="search"
+              placeholder="Search projects..."
+              class="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-700 shadow-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
+            />
+          </div>
+        </div>
+        <div id="portfolio-status" class="text-sm text-stone-500"></div>
+        <br>
         <div
           id="portfolio-container"
           data-github-user="SNiF21"

@@ -3,3 +3,18 @@
 @tailwind utilities;
 
 /* Optional: small global tweaks can go here if needed. */
+.portfolio-spinner {
+	display: inline-flex;
+	width: 1rem;
+	height: 1rem;
+	border: 2px solid #d6d3d1;
+	border-top-color: #57534e;
+	border-radius: 9999px;
+	animation: portfolio-spin 1s linear infinite;
+}
+
+@keyframes portfolio-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
