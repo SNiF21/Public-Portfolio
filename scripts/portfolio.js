@@ -1,4 +1,4 @@
-const DEFAULT_USER = "BraicuDragos";
+const DEFAULT_USER = "SNiF21";
 
 const container = document.getElementById("portfolio-container");
 const searchInput = document.getElementById("portfolio-search");
