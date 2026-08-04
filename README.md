@@ -10,7 +10,8 @@ Site-ul este publicat aici:
 
 ## Functionalitati
 
-- Afisare proiecte din GitHub si proiecte demo (fallback)
+- Afisare proiecte reale din GitHub
+- Sectiune de skills inspirata din profilul LinkedIn
 - Cautare in lista de proiecte
 - Buton "Load more"
 - Layout responsive
@@ -80,4 +81,4 @@ Acest pas genereaza fisierul minificat in `dist/output.css`.
 ## Note
 
 - Lista de proiecte este preluata din GitHub pe baza atributului `data-github-user` din `index.html`.
-- Daca API-ul GitHub nu este disponibil, se afiseaza proiectele demo din `scripts/portfolio.js`.
+- Daca API-ul GitHub nu este disponibil, lista ramane goala si este afisat un mesaj de eroare.
