@@ -193,4 +193,14 @@ if (loadMoreButton) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", loadProjects);
+// Only initialize the projects loader when the portfolio container exists on the page.
+if (container) {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadProjects);
+  } else {
+    loadProjects();
+  }
+} else {
+  // No portfolio container on this page (e.g. homepage). Skip GitHub API calls.
+  console.debug("No portfolio container found; skipping GitHub load.");
+}

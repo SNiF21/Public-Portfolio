@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Personal Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+    <script src="scripts/portfolio.js" defer></script>
+  </head>
+  <body class="min-h-screen text-stone-100 font-sans antialiased" style="font-size: 1.1rem; background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%); background-attachment: fixed;">
+    <a href="#main" class="sr-only">Skip to main content</a>
+
+    <div id="main" class="mx-auto max-w-3xl space-y-12 px-6 py-12" style="transform: scale(1.0); transform-origin: top center; width: min(100%, 60rem); background: rgba(14,22,33,0.9); border: 1px solid rgba(255,255,255,0.04); border-radius: 1rem; box-shadow: 0 8px 30px rgba(2,8,23,0.6);">
+      <header class="space-y-2">
+        <a href="index.html" class="text-2xl font-semibold text-stone-100 hover:text-stone-200">Colac Andrei-Cătălin — Back to home</a>
+        <p class="text-sm text-stone-300">GitHub projects and repositories. Filter, search, and open repos directly.</p>
+      </header>
+
+      <section id="portfolio" class="space-y-4">
+        <h2 class="text-xl font-semibold">GitHub Projects</h2>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div class="w-full sm:max-w-xs">
+            <label for="portfolio-search" class="sr-only">Search projects: </label>
+            <input
+              id="portfolio-search"
+              type="search"
+              placeholder="Search projects..."
+              class="w-full rounded-lg border border-stone-700 bg-stone-800 px-3 py-2 text-sm text-stone-300 shadow-sm focus:border-stone-600 focus:outline-none focus:ring-2 focus:ring-stone-700"
+            />
+          </div>
+        </div>
+        <div id="portfolio-status" class="text-sm text-stone-300"></div>
+        <br>
+        <div
+          id="portfolio-container"
+          data-github-user="SNiF21"
+          class="grid gap-4 sm:grid-cols-2"
+        ></div>
+        <div class="flex justify-center pt-2">
+          <button
+            id="portfolio-load-more"
+            type="button"
+            class="hidden rounded-full border border-stone-700 bg-stone-800 px-4 py-2 text-xs font-semibold text-stone-300 hover:border-stone-600 hover:text-stone-200"
+          >
+            Load more
+          </button>
+        </div>
+      </section>
+
+      <footer class="text-xs text-stone-500">
+        andreicatalin.colac@ulbsibiu.ro
+        <a href="https://github.com/SNiF21" target="_blank" rel="noopener noreferrer" class="underline hover:text-stone-700"><br>GitHub</a>
+      </footer>
+    </div>
+  </body>
+</html>

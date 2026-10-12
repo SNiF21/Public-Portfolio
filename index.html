@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="dist/output.css" />
     <script src="scripts/portfolio.js" defer></script>
   </head>
-  <body class="min-h-screen text-stone-900 font-sans antialiased" style="font-size: 1.1rem; background: radial-gradient(circle at top, #faf5ef 0%, #f0ece7 35%, #e7e1d9 100%); background-attachment: fixed;">
-    <div class="mx-auto max-w-3xl space-y-12 px-6 py-12" style="transform: scale(1.1); transform-origin: top center; width: min(100%, 60rem); background: rgba(255,255,255,0.38); border: 1px solid rgba(120,113,108,0.18); border-radius: 1.5rem; box-shadow: 0 12px 40px rgba(88, 80, 72, 0.08); backdrop-filter: blur(2px);">
+  <body class="min-h-screen text-stone-100 font-sans antialiased" style="font-size: 1.1rem; background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%); background-attachment: fixed;">
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <div id="main" class="mx-auto max-w-3xl space-y-12 px-6 py-12" style="transform: scale(1.1); transform-origin: top center; width: min(100%, 60rem); background: rgba(14,22,33,0.78); border: 1px solid rgba(255,255,255,0.06); border-radius: 1.5rem; box-shadow: 0 12px 40px rgba(2,8,23,0.6); backdrop-filter: blur(4px);">
       <header class="space-y-3">
         <div class="flex flex-col items-start gap-3">
           <a
@@ -20,11 +21,12 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Andrei Colac on LinkedIn"
-            class="flex h-[11.5rem] w-[11.5rem] shrink-0 items-center justify-center overflow-hidden rounded-full border-[2px] border-black shadow-sm transition-transform duration-200 hover:scale-105"
+            class="flex h-[11.5rem] w-[11.5rem] shrink-0 items-center justify-center overflow-hidden rounded-full border-[2px] border-white shadow-sm transition-transform duration-200 hover:scale-105"
           >
             <img
               src="assets/pfp.jpg"
               alt="Andrei Colac profile"
+              loading="lazy"
               class="h-full w-full object-cover object-center"
             />
           </a>
@@ -34,38 +36,38 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Andrei Colac on LinkedIn"
-            class="text-3xl font-semibold text-stone-900 hover:text-stone-700"
+            class="text-3xl font-semibold text-stone-100 hover:text-stone-200"
           >
             <h1>  Colac Andrei-Cătălin</h1>
           </a>
         </div>
-        <p class="text-sm text-stone-600">
+        <p class="text-sm text-stone-300">
           Engineering Intern at AUMOVIO. Computer Science student at Lucian Blaga University of Sibiu.
         </p>
       </header>
 
       <section id="about" class="space-y-3">
         <h2 class="text-xl font-semibold">About</h2>
-        <p class="text-sm text-stone-700">
+        <p class="text-sm text-stone-200">
           Engineering intern focused on building reliable software and gaining hands-on experience in embedded and modern C# development.
         </p>
-        <div class="flex flex-wrap gap-2 text-xs text-stone-600">
-          <span class="rounded-full bg-white px-3 py-1 ring-1 ring-stone-200">C#</span>
-          <span class="rounded-full bg-white px-3 py-1 ring-1 ring-stone-200">.NET Framework</span>
-          <span class="rounded-full bg-white px-3 py-1 ring-1 ring-stone-200">C++</span>
-          <span class="rounded-full bg-white px-3 py-1 ring-1 ring-stone-200">Embedded Systems</span>
+        <div class="flex flex-wrap gap-2 text-xs text-stone-300">
+          <span class="rounded-full bg-stone-800 px-3 py-1 ring-1 ring-stone-700">C#</span>
+          <span class="rounded-full bg-stone-800 px-3 py-1 ring-1 ring-stone-700">.NET Framework</span>
+          <span class="rounded-full bg-stone-800 px-3 py-1 ring-1 ring-stone-700">C++</span>
+          <span class="rounded-full bg-stone-800 px-3 py-1 ring-1 ring-stone-700">Embedded Systems</span>
         </div>
       </section>
 
       <section id="work-experience" class="space-y-3">
         <h2 class="text-xl font-semibold">Work Experience</h2>
         <div class="space-y-3">
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">Junior Engineering Intern</h3>
-              <span class="text-xs text-stone-500">Mar 2026 - Present</span>
+              <span class="text-xs text-stone-400">Mar 2026 - Present</span>
             </div>
-            <p class="mt-2 text-sm text-stone-600">AUMOVIO · Full-time · Sibiu, Romania (on-site).</p>
+            <p class="mt-2 text-sm text-stone-300">AUMOVIO · Full-time · Sibiu, Romania (on-site).</p>
           </article>
         </div>
       </section>
@@ -73,23 +75,23 @@
       <section id="projects" class="space-y-3">
         <h2 class="text-xl font-semibold">Projects</h2>
         <div class="space-y-3">
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">GitHub</h3>
-              <span class="text-xs text-stone-500">2025 - Present</span>
+              <span class="text-xs text-stone-400">2025 - Present</span>
             </div>
-            <p class="mt-2 text-sm text-stone-600">
+            <p class="mt-2 text-sm text-stone-300">
                My own GitHub account, where you can find all the projects I'm involved in.
             </p>
           </article>
 
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">GreenHabits</h3>
-              <span class="text-xs text-stone-500">Nov 2025 - Aug 2026</span>
+              <span class="text-xs text-stone-400">Nov 2025 - Aug 2026</span>
             </div>
             <div class="mt-2 grid items-center gap-4 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
-              <p class="text-sm text-stone-600 flex items-center justify-center text-center">
+              <p class="text-sm text-stone-200 flex items-center justify-center text-center">
                 Built with React Native and Firebase, GreenHabits translates small actions into real-world impact.
               </p>
               <div class="flex justify-center">
@@ -98,17 +100,18 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open GreenHabits Google Drive folder"
-                  class="inline-block rounded-2xl border-[2px] border-black bg-white p-2 shadow-sm transition-transform duration-200 hover:scale-[1.02]"
+                  class="inline-block rounded-2xl border-[2px] border-white bg-stone-800 p-2 shadow-sm transition-transform duration-200 hover:scale-[1.02]"
                 >
                   <img
                     src="assets/GreenHabits-QR.png"
                     alt="GreenHabits QR code"
+                    loading="lazy"
                     class="h-24 w-24 rounded-l object-cover"
                   />
                 </a>
               </div>
               <div class="flex items-center justify-center text-center">
-                <p class="text-sm text-stone-600">Test our app!<br>Scan the QR code or click it.</p>
+                <p class="text-sm text-stone-300">Test our app!<br>Scan the QR code or click it.</p>
               </div>
             </div>
           </article>
@@ -118,22 +121,22 @@
       <section id="education" class="space-y-3">
         <h2 class="text-xl font-semibold">Education</h2>
         <div class="space-y-3">
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">Lucian Blaga University of Sibiu</h3>
               <span class="text-xs text-stone-500">2024 - 2028</span>
             </div>
-            <p class="mt-2 text-sm text-stone-600">
+            <p class="mt-2 text-sm text-stone-300">
               Bachelor's degree, Computer Science. Activities: Asociatia BiT.
             </p>
           </article>
 
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">Eat Sleep Code Repeat 2025</h3>
               <span class="text-xs text-stone-500">Nov 2025 - Jun 2026</span>
             </div>
-            <p class="mt-2 text-sm text-stone-600">
+            <p class="mt-2 text-sm text-stone-300">
               NXP Semiconductors. Embedded software programming and systems work.
             </p>
           </article>
@@ -143,22 +146,22 @@
       <section id="awards" class="space-y-3">
         <h2 class="text-xl font-semibold">Awards</h2>
         <div class="space-y-3">
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">3rd place at Open Your Mind Hackathon</h3>
               <span class="text-xs text-stone-500">Nov 2025</span>
             </div>
-            <p class="mt-2 text-sm text-stone-600">
+            <p class="mt-2 text-sm text-stone-300">
               Served as a key developer for Team GreenHabits.
             </p>
           </article>
 
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">3rd Place at CoDEMO 5.0 Paris - GreenHabits</h3>
               <span class="text-xs text-stone-500">15-16 Jun 2026</span>
             </div>
-            <p class="mt-2 text-sm text-stone-600">
+            <p class="mt-2 text-sm text-stone-300">
               We expanded our mobile app to further drive the Green Digital Transition.
             </p>
           </article>
@@ -168,45 +171,20 @@
       <section id="volunteering" class="space-y-3">
         <h2 class="text-xl font-semibold">Volunteering</h2>
         <div class="space-y-3">
-          <article class="rounded-lg border border-stone-200 bg-white p-4">
+          <article class="rounded-lg border border-stone-700 bg-stone-800 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               <h3 class="font-medium">Co-Leader, Game Contests & Social Events for Asociatia BiT</h3>
               <span class="text-xs text-stone-500">Oct 2024 - Present</span>
             </div>
-            <p class="mt-2 text-sm text-stone-600"> Offer support with planning and coordination of gaming competitions and social events.</p>
+            <p class="mt-2 text-sm text-stone-300"> Offer support with planning and coordination of gaming competitions and social events.</p>
           </article>
         </div>
       </section>
 
-      <section id="portfolio" class="space-y-4">
-        <h2 class="text-xl font-semibold">GitHub Projects</h2>
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div class="w-full sm:max-w-xs">
-            <label for="portfolio-search" class="sr-only">Search projects: </label>
-            <input
-              id="portfolio-search"
-              type="search"
-              placeholder="Search projects..."
-              class="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-700 shadow-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
-            />
-          </div>
-        </div>
-        <div id="portfolio-status" class="text-sm text-stone-500"></div>
-        <br>
-        <div
-          id="portfolio-container"
-          data-github-user="SNiF21"
-          class="grid gap-4 sm:grid-cols-2"
-        ></div>
-        <div class="flex justify-center pt-2">
-          <button
-            id="portfolio-load-more"
-            type="button"
-            class="hidden rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-semibold text-stone-600 hover:border-stone-300 hover:text-stone-800"
-          >
-            Load more
-          </button>
-        </div>
+      <section id="projects-link" class="space-y-3">
+        <h2 class="text-xl font-semibold">Projects</h2>
+        <p class="text-sm text-stone-300">View the full list of GitHub projects on the dedicated projects page.</p>
+        <a href="projects.html" class="inline-block rounded-lg border border-stone-700 bg-stone-800 px-4 py-2 text-sm font-medium shadow-sm hover:bg-stone-800">Open Projects Page</a>
       </section>
 
       <footer class="text-xs text-stone-500">
