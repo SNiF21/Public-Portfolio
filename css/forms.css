@@ -1,0 +1,30 @@
+.form-success {
+  color: #86efac;
+}
+
+.form-error {
+  min-height: 1.25rem;
+  margin-top: 0.25rem;
+  color: #fca5a5;
+  font-size: 0.875rem;
+}
+
+.form-counter {
+  margin-top: 0.25rem;
+  color: #a8a29e;
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.form-field-error {
+  border-color: #f87171;
+  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.2);
+}
+
+.form-error-state {
+  color: #fca5a5;
+}
+
+.form-feedback:empty {
+  display: none;
+}

@@ -1,0 +1,50 @@
+.about-timeline {
+  display: grid;
+  gap: 1rem;
+  margin-left: 0.5rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.18);
+  list-style: none;
+}
+
+.about-skills {
+  grid-column: 1 / -1;
+}
+
+.about-timeline-item {
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.about-timeline-item::before {
+  position: absolute;
+  top: 0.35rem;
+  left: -1.65rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid #0f2338;
+  border-radius: 999px;
+  background: #93c5fd;
+  box-shadow: 0 0 0 2px rgba(147, 197, 253, 0.35);
+  content: "";
+}
+
+.about-timeline-item time {
+  color: #a8a29e;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .about-timeline-item {
+    grid-template-columns: 8rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .about-timeline-item time {
+    padding-top: 0.8rem;
+    text-align: right;
+  }
+}
