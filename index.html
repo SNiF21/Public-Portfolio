@@ -8,11 +8,27 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
     />
-    <link rel="stylesheet" href="dist/output.css" />
-    <script src="scripts/portfolio.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
   </head>
-  <body class="min-h-screen text-stone-100 font-sans antialiased" style="font-size: 1.1rem; background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%); background-attachment: fixed;">
+  <body class="site-page min-h-screen text-stone-100 font-sans antialiased" style="font-size: 1.1rem; background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%); background-attachment: fixed;">
     <a href="#main" class="sr-only">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
     <div id="main" class="mx-auto max-w-3xl space-y-12 px-6 py-12" style="transform: scale(1.1); transform-origin: top center; width: min(100%, 60rem); background: rgba(14,22,33,0.78); border: 1px solid rgba(255,255,255,0.06); border-radius: 1.5rem; box-shadow: 0 12px 40px rgba(2,8,23,0.6); backdrop-filter: blur(4px);">
       <header class="space-y-3">
         <div class="flex flex-col items-start gap-3">
@@ -44,6 +60,20 @@
         <p class="text-sm text-stone-300">
           Engineering Intern at AUMOVIO. Computer Science student at Lucian Blaga University of Sibiu.
         </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a
+            href="projects.html"
+            class="inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+          >
+            View Projects
+          </a>
+          <a
+            href="contact.html"
+            class="inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+          >
+            Contact Me
+          </a>
+        </div>
       </header>
 
       <section id="about" class="space-y-3">

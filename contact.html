@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Personal Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="site-page min-h-screen text-stone-100 font-sans antialiased" style="background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%);">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mx-auto max-w-3xl px-6 py-12">
+      <header class="space-y-2">
+        <h1 class="text-2xl font-semibold">Contact</h1>
+        <p class="text-sm text-stone-300">Send me a message — I'll get back to you shortly.</p>
+      </header>
+
+      <main class="mt-6">
+        <form id="contact-form" class="space-y-4" method="POST" data-formspree-id="your-form-id-here" novalidate>
+          <div>
+            <label for="name" class="block text-sm text-stone-300">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="name-error" class="w-full rounded-lg border border-stone-700 bg-stone-900 px-3 py-2 text-sm text-stone-100" />
+            <p id="name-error" class="form-error" role="alert"></p>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm text-stone-300">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" class="w-full rounded-lg border border-stone-700 bg-stone-900 px-3 py-2 text-sm text-stone-100" />
+            <p id="email-error" class="form-error" role="alert"></p>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm text-stone-300">Message</label>
+            <textarea id="message" name="message" rows="6" minlength="10" maxlength="2000" required aria-describedby="message-error" class="w-full rounded-lg border border-stone-700 bg-stone-900 px-3 py-2 text-sm text-stone-100"></textarea>
+            <p id="message-error" class="form-error" role="alert"></p>
+          </div>
+
+          <div>
+            <button type="submit" class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white">Send message</button>
+            <p class="form-feedback mt-3 text-sm" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

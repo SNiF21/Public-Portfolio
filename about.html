@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Personal Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="site-page min-h-screen text-stone-100 font-sans antialiased" style="background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%);">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mx-auto max-w-3xl px-6 py-12">
+      <header class="space-y-4">
+        <h1 class="text-3xl font-semibold">About Me</h1>
+        <p class="text-sm text-stone-300">I'm Andrei, a Computer Science student and engineering intern focused on embedded systems and modern C# development. I enjoy building reliable software and working on sustainability-focused projects like GreenHabits.</p>
+      </header>
+
+      <section class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div class="about-skills col-span-full rounded-lg border border-stone-700 bg-stone-900 p-4">
+          <h2 class="font-medium text-stone-100">Skills</h2>
+          <ul class="mt-2 text-sm text-stone-300 list-disc list-inside">
+            <li>C# / .NET</li>
+            <li>Embedded C++</li>
+            <li>React Native</li>
+            <li>Tailwind CSS / Frontend</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section class="mt-8" aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading" class="text-xl font-semibold">Experience & Education</h2>
+        <ol class="about-timeline mt-4">
+          <li class="about-timeline-item">
+            <time datetime="2024">2024–2028</time>
+            <div class="rounded-lg border border-stone-700 bg-stone-900 p-4">
+              <h3 class="font-medium text-stone-100">Computer Science, Lucian Blaga University of Sibiu</h3>
+              <p class="mt-2 text-sm text-stone-300">Bachelor's degree in progress, with a focus on software development and embedded systems.</p>
+            </div>
+          </li>
+          <li class="about-timeline-item">
+            <time datetime="2024-10">Oct 2024–Present</time>
+            <div class="rounded-lg border border-stone-700 bg-stone-900 p-4">
+              <h3 class="font-medium text-stone-100">Volunteer Co-Leader, Asociatia BiT</h3>
+              <p class="mt-2 text-sm text-stone-300">Support the planning and coordination of game contests and social events for the student community.</p>
+            </div>
+          </li>
+          <li class="about-timeline-item">
+            <time datetime="2025">2025–2026</time>
+            <div class="rounded-lg border border-stone-700 bg-stone-900 p-4">
+              <h3 class="font-medium text-stone-100">Embedded Software Training, NXP Semiconductors</h3>
+              <p class="mt-2 text-sm text-stone-300">Built practical experience with embedded programming and systems work through Eat Sleep Code Repeat.</p>
+            </div>
+          </li>
+          <li class="about-timeline-item">
+            <time datetime="2025-11">Nov 2025–Aug 2026</time>
+            <div class="rounded-lg border border-stone-700 bg-stone-900 p-4">
+              <h3 class="font-medium text-stone-100">GreenHabits Project</h3>
+              <p class="mt-2 text-sm text-stone-300">Key developer for a React Native and Firebase app that turns everyday sustainable actions into measurable real-world impact. The project placed third at the Open Your Mind Hackathon and CoDEMO 5.0 Paris.</p>
+            </div>
+          </li>
+          <li class="about-timeline-item">
+            <time datetime="2026-03">Mar 2026–Present</time>
+            <div class="rounded-lg border border-stone-700 bg-stone-900 p-4">
+              <h3 class="font-medium text-stone-100">Junior Engineering Intern, AUMOVIO</h3>
+              <p class="mt-2 text-sm text-stone-300">Developing reliable software and gaining hands-on experience with modern C# and embedded systems.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </body>
+</html>

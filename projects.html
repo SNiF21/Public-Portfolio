@@ -8,15 +8,27 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
     />
-    <link rel="stylesheet" href="dist/output.css" />
-    <script src="scripts/portfolio.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
   </head>
-  <body class="min-h-screen text-stone-100 font-sans antialiased" style="font-size: 1.1rem; background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%); background-attachment: fixed;">
+  <body class="site-page min-h-screen text-stone-100 font-sans antialiased" style="font-size: 1.1rem; background: radial-gradient(circle at top, #071029 0%, #0f2338 35%, #192a3a 100%); background-attachment: fixed;">
     <a href="#main" class="sr-only">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
 
     <div id="main" class="mx-auto max-w-3xl space-y-12 px-6 py-12" style="transform: scale(1.0); transform-origin: top center; width: min(100%, 60rem); background: rgba(14,22,33,0.9); border: 1px solid rgba(255,255,255,0.04); border-radius: 1rem; box-shadow: 0 8px 30px rgba(2,8,23,0.6);">
       <header class="space-y-2">
-        <a href="index.html" class="text-2xl font-semibold text-stone-100 hover:text-stone-200">Colac Andrei-Cătălin — Back to home</a>
         <p class="text-sm text-stone-300">GitHub projects and repositories. Filter, search, and open repos directly.</p>
       </header>
 
